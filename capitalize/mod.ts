@@ -3,6 +3,8 @@ addEventListener("fetch", (event: FetchEvent) => {
 });
 
 function handler(request: Request): Response {
+  console.log("New connection!");
+
   if (!request.body) {
     return new Response("Request must have body!", { status: 400 });
   }
